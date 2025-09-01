@@ -6,7 +6,16 @@
 */
 
 function countVowels(str) {
+  const pattern = /[aeiouAEIOU]/;
+  let count = 0;
     // Your code here
+    for(let i = 0;i<str.length;i++){
+      // if(str[i] in  ['a','e','i','o','u'])
+      if(pattern.test(str[i])){
+        count+=1;
+      }
+    }
+  return count;
 }
 
 module.exports = countVowels;
